@@ -1,0 +1,66 @@
+---
+title: "Why I Let a Robot Manage My Fake Money (And What It Taught Me About Investing)"
+author: "Pat"
+date: "2025-01-17"
+categories: [machine learning, trading, data science]
+---
+
+I will admit something embarrassing. In early 2024, I watched a stock I owned drop 15% in a single day and immediately sold everything. The next week, it bounced back 20%. I had panic-sold at the worst possible time. If you have ever traded stocks, you probably know the feeling. That sinking sensation when the market turns red. The temptation to check your portfolio every five minutes. The regret after making a decision you knew was emotional.
+
+This experience got me thinking: what if I could take emotions out of the equation entirely? What if I could build a system that trades based on rules and data instead of fear and greed? That question led me down a rabbit hole of paper trading, machine learning, and automated investing. Here is what I learned.
+
+## What Even Is Paper Trading?
+
+Before diving into automation, let me explain paper trading. It is essentially a stock market simulator. You trade with fake money, but everything else is real: real stock prices, real market conditions, real timing. Think of it as a flight simulator for investing. Pilots do not learn to fly by jumping into a Boeing 747. They practice in simulators first. Paper trading works the same way.
+
+The beauty of paper trading is that you can make mistakes without consequences. Want to test a risky strategy? Go ahead. Curious what would happen if you put everything into one stock? Try it. You learn the lessons without the financial pain. For someone like me who had already learned that lesson the expensive way, paper trading felt like a second chance.
+
+## The Problem With Human Trading
+
+Here is an uncomfortable truth: most individual investors underperform the market. Not by a little. By a lot. Studies consistently show that the average retail trader would be better off buying an index fund and doing nothing.
+
+Why? Because we are human. We panic when prices drop. We get greedy when prices rise. We chase trends, follow tips from friends, and convince ourselves that this time is different. These emotional decisions add up over time, eating into returns.
+
+Professional trading firms figured this out decades ago. They use algorithms. Computer programs that execute trades based on predefined rules. No emotions. No hesitation. Just data and logic. I wanted to see if I could build something similar, even if just as a learning exercise.
+
+## Building a Simple Trading Bot
+
+My first attempt was embarrassingly simple. I used a strategy called momentum trading. The idea is based on an observation that has held up over decades of market research: stocks that have been going up tend to keep going up, at least for a while. It is not magic. It is just pattern recognition.
+
+My bot would look at how stocks performed over the past few months. If a stock was in an upward trend, buy it. If it started falling behind, sell it and move to something else. No predictions about what a company is "really worth." No reading earnings reports. Just following the trend.
+
+Did it work? Sort of. In backtesting, where you simulate the strategy on historical data, it actually beat the market in several periods. But here is the catch: it also had some brutal losing streaks. Momentum strategies get crushed when markets suddenly reverse. This was my first lesson in why professional quants spend so much time thinking about risk.
+
+## Adding Machine Learning to the Mix
+
+After playing with momentum trading for a while, I got curious about machine learning. Could a model learn patterns in stock data that I could not see? The answer, it turns out, is complicated.
+
+I experimented with a method called XGBoost. Without getting too technical, it works by asking a series of questions about the data and combining the answers. Is the stock trading above its recent average? Is trading volume unusually high? Has the broader market been trending up? Each question helps narrow down whether a stock is likely to rise or fall.
+
+The exciting part: the model did find patterns. Certain combinations of factors seemed to predict short-term movements better than random chance. The humbling part: those patterns are fragile. A model trained on 2020 data might completely fail in 2024. Markets evolve. What worked yesterday might not work tomorrow. This is why paper trading matters so much. You can test whether your fancy model actually works in real conditions before risking actual money.
+
+## The Hidden Cost That Nobody Talks About
+
+Here is something that surprised me. Many strategies that look profitable on paper actually lose money in practice. The reason? Transaction costs.
+
+Every time you buy or sell a stock, you pay fees. They might seem tiny, maybe a few dollars per trade. But if your strategy trades frequently, those fees add up fast. A strategy that trades daily might generate hundreds of transactions per month. Even at a few dollars each, you could easily pay thousands in fees. Suddenly, your "12% annual return" becomes 4%. Or negative.
+
+This was a humbling realization. The slickest algorithm in the world means nothing if it trades so often that fees eat up all the profits. One of the most valuable things I learned was to account for realistic costs before getting excited about any strategy.
+
+## What I Actually Learned
+
+After months of building, testing, and tweaking, here is what stuck with me:
+
+First, automation removes emotion, but not risk. A bot will not panic sell. But it also will not notice when the world changes and your strategy becomes obsolete. You still need to pay attention.
+
+Second, backtesting is not the same as real performance. Historical data is the past. Markets are always adapting. A strategy that worked beautifully in 2015 might fall apart today.
+
+Third, simple often beats complex. My basic momentum strategy, despite its flaws, was easier to understand and debug than my fancy machine learning model. When something went wrong, I could actually figure out why.
+
+Fourth, paper trading is genuinely useful. I made dozens of mistakes in my simulator that would have cost real money otherwise. The learning curve is steep, and it is much better to climb it with fake dollars.
+
+## Should You Build a Trading Bot?
+
+Honestly, probably not if your goal is to get rich. The edge that individual investors can find is small, and the time investment is huge. But if your goal is to learn about markets, data science, and automation, I would highly recommend it. I learned more about investing from building this project than from years of casually trading stocks.
+
+And if nothing else, I stopped panic selling. Because now when my portfolio drops, I just remind myself: the robot would not care. Maybe I should not either.
