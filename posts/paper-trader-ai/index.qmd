@@ -1,6 +1,6 @@
 ---
 title: "Why I Let a Robot Manage My Fake Money (And What It Taught Me About Investing)"
-author: "Pat"
+author: "PAT0216"
 date: "2025-01-17"
 categories: [machine learning, trading, data science]
 ---
