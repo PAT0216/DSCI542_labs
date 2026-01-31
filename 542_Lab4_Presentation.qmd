@@ -1,0 +1,144 @@
+---
+title: "Why I Let a Robot Manage My Money"
+subtitle: "Building an Automated Trading System"
+author: "Prabuddha Tamhane"
+format:
+  revealjs:
+    theme: [default, custom-theme.scss]
+    slide-number: true
+    transition: slide
+    width: 1600
+    height: 900
+    center: true
+    logo: ""
+---
+
+## Land Acknowledgement {.center }
+
+I wish to acknowledge that we gather and study on the traditional, ancestral, and unceded lands of the **xʷməθkʷəy̓əm (Musqueam)** and **Sḵwx̱wú7mesh (Squamish)** Nations.
+
+I am thankful for the privilege to learn, work, and grow on this land.
+
+---
+
+## The Problem: Humans Are Terrible Investors {.center}
+
+In early 2024, I watched my stock drop **15% in one day**.
+
+I panicked. I sold everything.
+
+Next week? It bounced back **20%**.
+
+. . .
+
+**Why do we do this?** Because we're human:
+
+- We **panic** when prices drop
+- We get **greedy** when prices rise
+- We chase trends and follow tips
+
+*Most individual investors underperform a simple index fund.*
+
+---
+
+## The Solution: Let a Robot Decide {.center}
+
+::: {.columns}
+
+::: {.column width="45%"}
+
+### What I Built
+
+**Paper Trader AI** - Three strategies competing head-to-head:
+
+1. **Momentum** - Follow the trend
+2. **XGBoost** - ML pattern recognition
+3. **LSTM** - Deep learning predictions
+
+All trading S&P 500 stocks with fake money, real prices.
+
+*Think of it as a flight simulator for investing.*
+
+:::
+
+::: {.column width="55%"}
+
+### Live Dashboard
+
+![Paper Trader Dashboard](img/dashboard.png){width="100%"}
+
+:::
+
+:::
+
+---
+
+## The Results: Simple Beats Complex {.center background-image="img/dashboard.png" background-size="contain" background-opacity="0.3"}
+
+::: {.columns}
+
+::: {.column width="60%"}
+
+![](img/dashboard.png){width="100%"}
+
+:::
+
+::: {.column width="40%"}
+
+### Key Performance
+
+| Strategy | Return |
+|----------|--------|
+| **Momentum** | **+18.0%** |
+| XGBoost (ML) | +6.8% |
+| LSTM | +7.7% |
+| SPY Benchmark | +3.4% |
+
+:::
+
+:::
+
+. . .
+
+::: {.highlight-box}
+**The Hidden Lesson:** XGBoost made **576 trades** vs Momentum's **50 trades**.  
+More trades = more fees = lower returns. Less is More.
+:::
+
+---
+
+## Key Takeaways {.center}
+
+::: {.fragment}
+1. **Automation removes emotion, but not risk**
+   - The bot won't panic sell, but markets still change
+:::
+
+::: {.fragment}
+2. **Simple strategies often beat complex ones**
+   - My basic momentum strategy outperformed fancy ML models
+:::
+
+::: {.fragment}
+3. **Transaction costs are the silent killer**
+   - That "great" strategy might just be feeding the brokers
+:::
+
+. . .
+
+::: {.callout-tip}
+## The Bottom Line
+Now when my portfolio drops, I remind myself:
+
+**The robot wouldn't care. Maybe I shouldn't either.**
+:::
+
+---
+
+## Thank You! {.center}
+
+### Questions?
+
+🔗 **Live Dashboard:** [paper-trader-ai.streamlit.app](https://paper-trader-ai.streamlit.app)
+
+📂 **GitHub:** [github.com/PAT0216/paper-trader](https://github.com/PAT0216/paper-trader)
